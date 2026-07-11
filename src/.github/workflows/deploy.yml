@@ -1,0 +1,11 @@
+ name: deploy
+  on:
+    push:
+      branches: [staging, production]
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      # environment = the branch name → 'staging' or 'production'
+      environment: ${{ github.ref_name }}
+      steps:
+        - run: echo "deploying $GITHUB_REF_NAME"
