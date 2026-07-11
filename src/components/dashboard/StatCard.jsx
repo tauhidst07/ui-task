@@ -8,7 +8,7 @@ const StatCard = ({ icon: Icon, label, value, change, color }) => {
     };
 
     return (
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200/50 hover:shadow-xl transition-shadow">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-gray-200/50 hover:shadow-xl hover:-translate-y-0.5 transition-all">
             <div className="flex items-start justify-between">
                 <div>
                     <p className="text-[#0F1B2B]/60 text-sm mb-2">{label}</p>
