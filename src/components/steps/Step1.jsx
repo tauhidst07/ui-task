@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import React from 'react'
 import OTPInput from '../OtpInput.jsx';
 
@@ -10,7 +10,7 @@ const Step1 = ({ register, errors, watchEmail, codeSent, otp, setOtp, onSendCode
                     <button
                         type="button"
                         onClick={onGoogleSignup}
-                        className="w-full px-6 py-4 bg-white border border-gray-200 shadow-sm hover:border-gray-300 hover:bg-gray-50 hover:shadow-md text-[#0F1B2B] font-semibold rounded-xl transition-all flex items-center justify-center gap-3 text-base"
+                        className="w-full px-6 py-4 bg-white border-2 border-gray-300 hover:border-gray-400 hover:bg-gray-50 text-[#0F1B2B] font-semibold rounded-xl transition-all flex items-center justify-center gap-3 text-base"
                     >
                         <svg className="w-5 h-5" viewBox="0 0 24 24">
                             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -34,21 +34,18 @@ const Step1 = ({ register, errors, watchEmail, codeSent, otp, setOtp, onSendCode
                         <label className="block text-sm font-semibold text-[#0F1B2B] mb-2.5">
                             Work email
                         </label>
-                        <div className="relative">
-                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
-                            <input
-                                type="email"
-                                {...register('email', {
-                                    required: 'Email is required',
-                                    pattern: {
-                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                        message: 'Invalid email address'
-                                    }
-                                })}
-                                placeholder="you@company.com"
-                                className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-300 focus:border-[#008DC2] focus:ring-4 focus:ring-[#008DC2]/10 outline-none transition-all text-base placeholder:text-gray-400"
-                            />
-                        </div>
+                        <input
+                            type="email"
+                            {...register('email', {
+                                required: 'Email is required',
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                    message: 'Invalid email address'
+                                }
+                            })}
+                            placeholder="you@company.com"
+                            className="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:border-[#008DC2] focus:ring-4 focus:ring-[#008DC2]/10 outline-none transition-all text-base placeholder:text-gray-400"
+                        />
                         {errors.email && (
                             <p className="mt-2 text-sm text-red-600">{errors.email.message}</p>
                         )}
