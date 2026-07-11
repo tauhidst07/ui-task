@@ -109,9 +109,6 @@ const OnboardingFlow = () => {
       <div className="w-full max-w-[580px]">
         {/* Main Heading */}
         <div className="text-center mb-8 w-full">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-linear-to-br from-[#008DC2] to-[#00549A] shadow-lg shadow-[#008DC2]/30 mb-5">
-            <Zap className="w-6 h-6 text-white" fill="white" />
-          </div>
           <h1 className="text-4xl  font-bold text-[#0F1B2B] leading-tight tracking-tight mb-4">
             {currentStep === 1 && 'Welcome to WorkElate'}
             {currentStep === 2 && 'Set up your workspace'}
@@ -192,9 +189,6 @@ const OnboardingFlow = () => {
             />
           ))}
         </div>
-        <p className="text-center text-xs font-medium text-[#0F1B2B]/40 mt-3">
-          Step {currentStep} of 4
-        </p>
       </div>
     </div>
   );
