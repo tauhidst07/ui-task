@@ -1,12 +1,12 @@
- name: deploy
-  on:
-    push:
-      branches:
-        - staging
-        - production
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
-      environment: ${{ github.ref_name }}
-      steps:
-        - run: echo "deploying to $GITHUB_REF_NAME"
+name: deploy
+on:
+  push:
+    branches:
+      - staging
+      - production
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name }}
+    steps:
+      - run: echo "deploying to $GITHUB_REF_NAME"
