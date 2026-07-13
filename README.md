@@ -19,3 +19,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 jira github integration testing 
 jira commit integration test
+
+
+some additonal changes 
