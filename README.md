@@ -22,3 +22,5 @@ tesing github to board connection
 
 
 some new changes in readme file
+
+manual pr test
